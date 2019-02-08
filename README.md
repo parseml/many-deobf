@@ -15,3 +15,13 @@ ig.game.player.changeName // Change name function
 ig.game.entities // Player Array
 ig.game.equip.item // Function to equip bodies / items
 ```
+# Example
+
+Script that displays players in game
+```js
+$.getScript("http://cdn.jsdelivr.net/gh/parseml/many-deobf/deobf.js");
+
+ig.game.entities.forEach((player) => {
+	consoleref.log(player.screenName);
+});
+```
