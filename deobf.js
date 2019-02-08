@@ -63,6 +63,7 @@ const Deobfuscator = {
 // Predefined Obfuscation List
 
 ig.game.player = Deobfuscator.object(ig.game, "screenName", false);
+ig.game.player.changeName = Deobfuscator.function(ig.game, "this.screenName", false);
 ig.game.entities = Deobfuscator.object(ig.game, "betweenDefaultAndPlayer", false).player;
 ig.game.equip = Deobfuscator.object(ig.game, "removeItemFromCollection", false);
 ig.game.equip.item = Deobfuscator.function(ig.game.equip, "AnimationSheet(null,d", false);
