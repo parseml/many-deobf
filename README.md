@@ -5,7 +5,7 @@ Keep up to date with manyland obfuscation
 
 Importing in to your script
 ```js
-$.getScript("https://github.com/parseml/many-deobf/blob/master/deobf.js")
+$.getScript("https://raw.githubusercontent.com/parseml/many-deobf/master/deobf.js")
 ```
 
 Preset variables
