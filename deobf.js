@@ -64,5 +64,3 @@ const Deobfuscator = {
 
 ig.game.player = Deobfuscator.object(ig.game, "screenName", false);
 ig.game.entities = Deobfuscator.object(ig.game, "betweenDefaultAndPlayer", false).player;
-ig.game.equip = Deobfuscator.object(ig.game, "removeItemFromCollection", false);
-ig.game.equip.item = Deobfuscator.function(ig.game, "AnimationSheet(null,d", false);
