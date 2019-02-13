@@ -22,9 +22,11 @@ ig.game.equip.item // Function to equip bodies / items
 
 Script that displays players in game
 ```js
-$.getScript("http://cdn.jsdelivr.net/gh/parseml/many-deobf/deobf.js");
-
-ig.game.players.forEach((player) => {
-	consoleref.log(player.screenName);
-});
+(async () => {
+	await $.getScript("http://cdn.jsdelivr.net/gh/parseml/many-deobf/deobf.js");
+	
+	ig.game.players.forEach(player => {
+		consoleref.log(player.screenName);
+	});
+})();
 ```
