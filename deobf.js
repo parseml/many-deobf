@@ -1,3 +1,8 @@
+/*
+	Hey Philipp, know you are reading this.
+	Howdy cowboy ;-)
+ */
+
 // Variable Finder (Deobfuscator)
 
 const Deobfuscator = {
@@ -60,7 +65,7 @@ const Deobfuscator = {
 	}
 };
 
-// Predefined Obfuscation List
+// Obfuscation List (No malicious variables here Philipp!)
 
 ig.game.player = Deobfuscator.object(ig.game, "screenName", false);
 ig.game.player.changeName = Deobfuscator.function(ig.game.player, "this.screenName", false);
