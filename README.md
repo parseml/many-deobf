@@ -8,7 +8,7 @@ Get in contact with me! Parse#3645
 
 Importing in to your script
 ```js
-$.getScript("http://cdn.jsdelivr.net/gh/parseml/many-deobf/deobf.js")
+$.getScript("https://cdn.jsdelivr.net/gh/parseml/many-deobf@latest/deobf.js")
 ```
 
 Preset variables
