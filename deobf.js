@@ -62,6 +62,18 @@ const Deobfuscator = {
 		});
 
 		return keyFound;
+	},
+	keyBetween: (func, start, end) => {
+		let keyFound = null;
+
+		const str = func.toString();
+
+		keyFound = str.substring(
+    		str.lastIndexOf(start) + start.length, 
+    		str.lastIndexOf(end)
+		);
+
+		return keyFound;
 	}
 };
 
