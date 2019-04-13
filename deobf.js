@@ -72,3 +72,21 @@ ig.game.player.changeName = Deobfuscator.function(ig.game.player, "this.screenNa
 ig.game.players = Deobfuscator.object(ig.game, "betweenDefaultAndPlayer", false).player;
 ig.game.equip = Deobfuscator.object(ig.game, "removeItemFromCollection", false);
 ig.game.equip.item = Deobfuscator.function(ig.game.equip, "AnimationSheet(null,d", false);
+ig.game.blocks = Deobfuscator.object(ig.game, "lastRequestTimestamps", false);
+ig.game.websocket = Deobfuscator.object(ig.game, "binary", false);
+ig.game.player.id = Deobfuscator.variableByLength(ig.game, 24, false);
+
+// Functions you can use to speed up programming
+
+const idFromScreenName = screenName => {
+	const key = Deobfuscator.variableByLength(ig.game.player, 24, true);
+	return new Promise((res, rej) => {
+		ig.game.players.forEach(player => {
+			if(ig.game.player.screenName === screenName) {
+				res(player[key]);
+			}
+		});
+
+		rej('Player not found!');
+	});
+}
