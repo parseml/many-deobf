@@ -20,6 +20,8 @@ ig.game.equip.item // Function to equip bodies / items
 ig.game.blocks // Object that holds block ids and such
 ig.game.websocket // WebSocket object
 ig.game.player.id // Your player ID
+
+async idFromScreenName(string screenName)
 ```
 # Example
 
