@@ -77,7 +77,7 @@ const Deobfuscator = {
 	}
 };
 
-// Obfuscation List (No malicious variables here Philipp!)
+// Obfuscation List
 
 ig.game.player = Deobfuscator.object(ig.game, "screenName", false);
 ig.game.player.changeName = Deobfuscator.function(ig.game.player, "this.screenName", false);
