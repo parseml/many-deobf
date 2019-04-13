@@ -17,6 +17,9 @@ ig.game.player // Self Object
 ig.game.player.changeName // Change name function
 ig.game.players // Player Array
 ig.game.equip.item // Function to equip bodies / items
+ig.game.blocks // Object that holds block ids and such
+ig.game.websocket // WebSocket object
+ig.game.player.id // Your player ID
 ```
 # Example
 
