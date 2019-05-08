@@ -1,8 +1,3 @@
-/*
-	Hey Philipp, know you are reading this.
-	Howdy cowboy ;-)
- */
-
 // Variable Finder (Deobfuscator)
 
 const Deobfuscator = {
@@ -74,6 +69,19 @@ const Deobfuscator = {
 		);
 
 		return keyFound;
+	},
+	findByType: (object, type, returnKey) => {
+		let keyFound = null;
+
+		Object.keys(object).forEach((i) => {
+			if(object[i] === null)
+				return;
+
+			if(object[i].constructor === type)
+				keyFound = returnKey ? i : object[i];
+		});
+
+		return keyFound;
 	}
 };
 
@@ -87,6 +95,7 @@ ig.game.equip.item = Deobfuscator.function(ig.game.equip, "AnimationSheet(null,d
 ig.game.blocks = Deobfuscator.object(ig.game, "lastRequestTimestamps", false);
 ig.game.websocket = Deobfuscator.object(ig.game, "binary", false);
 ig.game.player.id = Deobfuscator.variableByLength(ig.game.player, 24, false);
+id = Deobfuscator.variableByLength(ig.game.player, 24, true);
 
 // Functions you can use to speed up programming
 
@@ -101,4 +110,27 @@ const idFromScreenName = screenName => {
 
 		rej('Player not found!');
 	});
+}
+
+const updatePlayers = () => {
+	ig.game.players = Deobfuscator.object(ig.game, "betweenDefaultAndPlayer", false).player;
+}
+
+const getPlayerChat = target => {
+	updatePlayers();
+	let chat = "";
+
+	ig.game.players.forEach(player => {
+		if(player[id] === target) {
+			let playerChat = Deobfuscator.object(player, 'player', false);
+			playerChat.object = Deobfuscator.findByType(playerChat, Array, false);
+
+			if(playerChat.object.length != 0) {
+				let index = playerChat.object.length - 1;
+				chat = Deobfuscator.findByType(playerChat.object[index], String, false);
+			}
+		}
+	});
+
+	return chat;
 }
