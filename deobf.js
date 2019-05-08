@@ -1,5 +1,10 @@
 // Variable Finder (Deobfuscator)
 
+consoleref.log( // Please do not remove!
+	'%cDeobfuscator created by Parse\nCheck it out -> github.com/parseml/many-deobf',
+	'background: green; color: white; display: block; padding-left: 0px;',
+);
+
 const Deobfuscator = {
 	function: (object, string, returnKey) => {
 		let keyFound = null;
