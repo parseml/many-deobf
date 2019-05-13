@@ -105,10 +105,11 @@ id = Deobfuscator.variableByLength(ig.game.player, 24, true);
 // Functions you can use to speed up programming
 
 const idFromScreenName = screenName => {
+	updatePlayers();
 	const key = Deobfuscator.variableByLength(ig.game.player, 24, true);
 	return new Promise((res, rej) => {
 		ig.game.players.forEach(player => {
-			if(ig.game.player.screenName === screenName) {
+			if(player.screenName === screenName) {
 				res(player[key]);
 			}
 		});
