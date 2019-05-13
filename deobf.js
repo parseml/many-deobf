@@ -140,3 +140,13 @@ const getPlayerChat = target => {
 
 	return chat;
 }
+
+const itemInformation = async id => {
+	const api = 'http://idf.manyland.netdna-cdn.com/';
+	return new Promise((res, rej) => {
+		$.get(api + id, (data, code) => {
+			if(code === 'success') res(data);
+			else rej('Something went wrong!');
+		});
+	});
+}
