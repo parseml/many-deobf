@@ -23,7 +23,8 @@ ig.game.player.id // Your player ID
 
 async idFromScreenName(string screenName) // Screenname to player id
 const getPlayerChat(string targetID) // Returns players chat
-const async itemInformation(string itemID) // Returns item information
+async itemInformation(string itemID) // Returns item information
+const updatePlayers() // Updates the player array (For when new players join and such)
 ```
 # Example
 
