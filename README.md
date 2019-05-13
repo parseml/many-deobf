@@ -21,9 +21,9 @@ ig.game.blocks // Object that holds block ids and such
 ig.game.websocket // WebSocket object
 ig.game.player.id // Your player ID
 
-function async idFromScreenName(string screenName) // Screenname to player id
-function getPlayerChat(string targetID) // Returns players chat
-function async itemInformation(string itemID) // Returns item information
+async idFromScreenName(string screenName) // Screenname to player id
+const getPlayerChat(string targetID) // Returns players chat
+const async itemInformation(string itemID) // Returns item information
 ```
 # Example
 
