@@ -92,7 +92,9 @@ const Deobfuscator = {
 
 // Obfuscation List
 
+ig.game.chat = Deobfuscator.object(ig.game, "thumbing", false);
 ig.game.player = Deobfuscator.object(ig.game, "screenName", false);
+ig.game.player.say = function(a){return ig.game.chat.say('_s'+a)}
 ig.game.player.changeName = Deobfuscator.function(ig.game.player, "this.screenName", false);
 ig.game.players = Deobfuscator.object(ig.game, "betweenDefaultAndPlayer", false).player;
 ig.game.equip = Deobfuscator.object(ig.game, "removeItemFromCollection", false);
@@ -100,6 +102,9 @@ ig.game.equip.item = Deobfuscator.function(ig.game.equip, "AnimationSheet(null,d
 ig.game.blocks = Deobfuscator.object(ig.game, "lastRequestTimestamps", false);
 ig.game.websocket = Deobfuscator.object(ig.game, "binary", false);
 ig.game.player.id = Deobfuscator.variableByLength(ig.game.player, 24, false);
+ig.game.motionDialog.play = Deobfuscator.function(ig.game.motionDialog,"this.motionIds.length&&!c;d++)", false);
+
+
 id = Deobfuscator.variableByLength(ig.game.player, 24, true);
 
 // Functions you can use to speed up programming
