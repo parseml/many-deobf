@@ -1,5 +1,5 @@
 # Manyland Deobfuscator
-Keep up to date with manyland obfuscation
+Keep up to date with manyland obfuscation, created by Parse.
 
 # Usage
 
@@ -18,10 +18,8 @@ ig.game.blocks // Object that holds block ids and such
 ig.game.websocket // WebSocket object
 ig.game.player.id // Your player ID
 
-async idFromScreenName(string screenName) // Screenname to player id
-const getPlayerChat(string targetID) // Returns players chat
-async itemInformation(string itemID) // Returns item information
-const updatePlayers() // Updates the player array (For when new players join and such)
+function idFromScreenName(string screenName) // Screenname to player id
+function updatePlayers() // Updates the ig.game.players array for new players
 ```
 # Example
 
