@@ -1,5 +1,6 @@
 # Manyland Deobfuscator
 Keep up to date with manyland obfuscation, created by Parse.
+If you want to learn how it works, you can find documentation written here https://manylandmods.github.io/manyland-documentation/#/
 
 # Usage
 
