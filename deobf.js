@@ -17,8 +17,6 @@ var Deobfuscator = {
 		let keys = Object.keys(object)
 		let proto = Object.keys(Object.getPrototypeOf(object))
 
-		test = [ ...keys, ...proto ]
-
 		for(let key of [ ...keys, ...proto ]) {
 			if(!object[key])
 				continue
