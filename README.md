@@ -8,7 +8,7 @@ Importing in to your script
 $.getScript("https://cdn.jsdelivr.net/gh/parseml/many-deobf@latest/deobf.js")
 ```
 
-Preset variables
+Predefined variables / functions / objects
 ```js
 ig.game.player // Self Object
 ig.game.player.changeName // Change name function
@@ -17,6 +17,7 @@ ig.game.equip.item // Function to equip bodies / items
 ig.game.blocks // Object that holds block ids and such
 ig.game.websocket // WebSocket object
 ig.game.player.id // Your player ID
+id // The key for the players RID, ex: ig.game.players[0][id]
 
 function idFromScreenName(string screenName) // Screenname to player id
 function updatePlayers() // Updates the ig.game.players array for new players
