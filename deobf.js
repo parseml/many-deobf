@@ -1,4 +1,8 @@
-if(typeof id === "undefined") {
+/**
+ * Phil, if you are reading this and want to kill it off.. just define a global variable called
+ * "PhilippKillSwitch"!
+ */
+if(typeof PhilippKillSwitch == "undefined" && typeof id === "undefined") {
 	/**
 	 * Written by Parse
 	 * A tool for finding minified manyland variables.
